@@ -20,7 +20,10 @@ A powerful, privacy-focused iOS SDK for tracking health metrics without relying 
 ### Swift Package Manager
 
 1. In Xcode, go to **File → Add Package Dependencies**.
-2. Enter the URL: `https://github.com/avinashamanjha251/AJSensorHealthDataSDK`
+2. Enter the URL:
+   ```
+   https://github.com/avinashamanjha251/AJSensorHealthDataSDK
+   ```
 3. Set the dependency rule to **Up to Next Major Version** or **Exact**.
 
 ## Usage
