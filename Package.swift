@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AJSensorHealthData",
-            url: "https://github.com/avinashamanjha251/AJSensorHealthDataSDK/releases/download/1.0.3/AJSensorHealthData.xcframework.zip",
-            checksum: "0bb4a4cdc5f517f8720e279f7bb0ed792a15fc103e569bf4af9ad99224030fc9"
+            url: "https://github.com/avinashamanjha251/AJSensorHealthDataSDK/releases/download/1.0.4/AJSensorHealthData.xcframework.zip",
+            checksum: "1b6f5f2355c2d13d678ea24809f2dbbee52cb5a882cd5cc4a5bdcefafe8a7343"
         )
     ]
 )
