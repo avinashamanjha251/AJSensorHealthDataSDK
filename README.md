@@ -36,10 +36,10 @@ Before fetching data, you must provide user metrics for accurate calculations.
 import AJSensorHealthData
 
 let config = AJUserConfiguration(
-    gender: .male,
-    age: 25,
-    heightCm: 175,
-    weightKg: 70
+   weightKg: 70,
+   heightCm: 175,
+   ageYears: 25,
+   gender: .male
 )
 
 AJSensorHealthManager.shared.setupUserConfiguration(config)
