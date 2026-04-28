@@ -36,10 +36,10 @@ Before fetching data, you must provide user metrics for accurate calculations.
 import AJSensorHealthData
 
 let config = AJUserConfiguration(
-    gender: .male,
-    age: 25,
-    heightCm: 175,
-    weightKg: 70
+    weightKg: 70.0,
+    heightCm: 175.0,
+    ageYears: 25,
+    gender: .male
 )
 
 AJSensorHealthManager.shared.setupUserConfiguration(config)
@@ -73,7 +73,23 @@ AJSensorHealthManager.shared.fetchLastSevenDayActivityHistory { result in
 }
 ```
 
-### 4. Fetch Sleep History (Last 7 Days)
+### 4. Fetch Activity Data for Custom Range
+
+```swift
+let startDate = Date().addingTimeInterval(-86400) // 1 day ago
+let endDate = Date()
+
+AJSensorHealthManager.shared.fetchDayActivityData(startDate: startDate, endDate: endDate) { result in
+    switch result {
+    case .success(let dayResult):
+        print("Steps: \(dayResult.stepCount), Calories: \(dayResult.calories)")
+    case .failure(let error):
+        print("Error fetching custom range activity: \(error)")
+    }
+}
+```
+
+### 5. Fetch Sleep History (Last 7 Days)
 
 ```swift
 AJSensorHealthManager.shared.fetchLastSevenDaySleepHistory { result in
@@ -88,7 +104,7 @@ AJSensorHealthManager.shared.fetchLastSevenDaySleepHistory { result in
 }
 ```
 
-### 5. Stop Updates
+### 6. Stop Updates
 
 ```swift
 AJSensorHealthManager.shared.stopUpdates()
